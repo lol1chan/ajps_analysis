@@ -125,7 +125,6 @@ def encapsulate_crendal(pk, n, h, lam, c):
     C1 = ((A * R) + B1) % M_nc
     C2 = (((A * T) + B2) % M_nc) ^ Em
 
-    # Повертаємо капсулу й ключ
     return (C1, C2), K
 
 def decapsulate_crendal(sk, pk, ciphertext, n, h, lam, c):
