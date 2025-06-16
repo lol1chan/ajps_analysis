@@ -184,7 +184,6 @@ def decrypt_genmersenne(C, sk, n, m, h):
 def pk_to_bitstring(pk, length):
     return format(pk, f'0{length}b')
 
-# Write newly generated bitstrings repeatedly to file until target size in bytes
 def write_bits_to_file(filename, keygen_func, length, target_size_bytes=2 * 1024 * 1024, *args):
     with open(filename, 'w') as f:
         current_size = 0
